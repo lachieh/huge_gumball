@@ -1,16 +1,17 @@
 from twython import Twython, TwythonStreamer
 import pyotp
 
-APP_KEY = 'QMSndpHKNjnWfzMdfZqkDnc66'
-APP_SECRET = 'rX7G8758nbHV0wrOeEvi3D3OKR5AtfTMQUgYbI79At6C3ynWLm'
+APP_KEY = 'OXTF145y8NGgzdWsTgQgc2eO4'
+APP_SECRET = 'ngjWEGkuHJVv314dUHb1dy8uEvvMxdMOF3XGVAR8K2xG619U4D'
 
-OAUTH_TOKEN = '14652468-IZRc4nTviFqf3qbo6Lq3lnscPFlN1ICF9nBBhDJWr'
-OAUTH_TOKEN_SECRET = 'zRLCxqf1V9iDHcD7NpuBxO4MsrN0Ya31nTSK3GnNYkFUV'
+OAUTH_TOKEN = '14652468-74nWSyPTov403RuTPVPEvbyCa5gwUPqn3ColI2q8u'
+OAUTH_TOKEN_SECRET = 'dJf9uwD5f7P8PSVauaZHDmogwdk89uqvjKuKDFO5FEZSU'
 
 search_term = '#ignorethistweetitsatest'
 
 totp = pyotp.TOTP('base32secret3232')
 twitter = Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
+current_user = ""
 
 def CheckFollow(screenname):
 	friendships = twitter.lookup_friendships(screen_name=screenname)
@@ -20,20 +21,40 @@ def CheckFollow(screenname):
 		result = False
 	return result
 
-class MyStreamer(TwythonStreamer):
+
+def CheckPassWithUser(user_screen_name):
+	message_text = "Thanks! What's the current OTP?"
+	twitter.send_direct_message(screen_name=user_screen_name, text=message_text)
+	print "DM sent to user ", user_screen_name
+	stream = UserStreamer(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
+	global current_user
+	current_user = user_screen_name
+	stream.user()
+
+class UserStreamer(TwythonStreamer):
+	def on_success(self, data):
+		print 'Current OTP:', totp.now()
+		if 'direct_message' in data:
+			if data['direct_message']['sender']['screen_name'] == current_user:
+				validate = totp.verify(int(data['direct_message']['text']))
+				print validate
+				if validate == True:
+					print 'Authentication Passed'
+					self.disconnect()
+				else:
+					print 'Failed Authentication. Waiting...'
+
+	def on_error(self, status_code, data):
+		print status_code, data
+
+class SearchStreamer(TwythonStreamer):
     def on_success(self, data):
 		if 'user' in data:
-			print 'Triggered tweet: ', data['text']
-			print 'by user ', data['user']['screen_name']
+			print 'Triggered tweet: "', data['text'],'" by user', data['user']['screen_name']
 			following = CheckFollow(data['user']['screen_name'])
 			if following == True:
 				print 'User', data['user']['screen_name'], 'is following you.'
-				print 'Current OTP:', totp.now()
-				validate = totp.verify(int(input('Enter current OTP: ')))
-				if validate == True:
-					print 'Validation Success'
-				else:
-					print 'Validation Failed'
+				CheckPassWithUser(data['user']['screen_name'])
 			else:
 				print 'User', data['user']['screen_name'], '" is NOT following you.'
 
@@ -41,6 +62,6 @@ class MyStreamer(TwythonStreamer):
         print status_code, data
 
 
-stream = MyStreamer(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
+stream = SearchStreamer(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 
 stream.statuses.filter(track=search_term)
