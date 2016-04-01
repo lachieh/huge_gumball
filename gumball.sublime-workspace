@@ -1,0 +1,568 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"key",
+				"keydown	.keydown()"
+			],
+			[
+				"val",
+				"validatedElement"
+			],
+			[
+				"va",
+				"validatedElement"
+			],
+			[
+				"validat",
+				"validatedElement"
+			],
+			[
+				"$gray-",
+				"$gray-lighter"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"append",
+				"appendTo	.appendTo()"
+			],
+			[
+				"eas",
+				"ease-out"
+			],
+			[
+				"sc",
+				"scrollToTarget"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"table-",
+				"table-cell"
+			],
+			[
+				"text-",
+				"text-transform"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"pos",
+				"pos	position: ${1:relative};"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"paddgi",
+				"padding-bottom"
+			],
+			[
+				"background",
+				"background-repeat"
+			],
+			[
+				"scroll",
+				"scrollTarget"
+			],
+			[
+				"out",
+				"outerHeight	.outerHeight()"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instll",
+				"Package Control: Install Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"select",
+				"Bracketeer: Select Inside Braces"
+			],
+			[
+				"brack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"gutter the",
+				"SublimeLinter: Choose Gutter Theme"
+			],
+			[
+				"lint",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"sass",
+				"SassBeautify"
+			],
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"edir",
+				"Set Syntax: EditorConfig"
+			],
+			[
+				"inc",
+				"Emmet: Increment Number by 1"
+			],
+			[
+				"tab",
+				"AlignTab: Live Preview Mode"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 521.0
+	},
+	"console":
+	{
+		"height": 200.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/module/_menu-separator.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/layouts/form-all-fields.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/layout/_grid.scss",
+		"/Users/lheywood/Tinyfy/composer.json",
+		"/Users/lheywood/Tinyfy/squish.py",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/module/tiles/_menu-tile.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/module/_introduction.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/module/_forms.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/base/_variables.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/js/main.js",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/js/utils.js",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/js/data/restaurants.js",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/js/templates/location.html",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Components/PrivateDiningForm.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/module/_disclaimer.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/layouts/private-dining-dinner.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/layouts/local.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/layouts/private-dining.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/layouts/private-events.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Components/MenuSeparator.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Components/AdditionalServices.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/components/_mixins.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Layouts/Careers.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/components/hero.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/components/hero-cta.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/layouts/menu-item-detail.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/components/hero-menu.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/main.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/module/_versatile.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/shared/header.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/index.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Components/EventMealInfoTile.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/layouts/dinner.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/components/versatile-two-equal-menu.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/components/versatile-flexcontainer.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Components/PageIntroduction.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/components/location-picker.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/base/_typography.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/layouts/news.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/gulpfile.js",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/components/introduction.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/layout/_flex-container.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Shared/Main.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/layouts/private-events-dinner.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/layouts/error.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/components/hero-cta-alt.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/shared/main.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/components/menu-divider.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/layouts/happy-hour.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/layouts/bar.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/layouts/private-events-lunch.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/layouts/private-events-reception.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/base/_base.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/layouts/lunch.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/layouts/locations.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/layouts/home.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/module/_hero-menu.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Layouts/Menu.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Layouts/PrivateEventsMenu.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/components/hero-menu-private-events.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/module/_menu-item-detail.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Components/MenuItemDetailNavigation.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/module/_location-landing.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/shared/footer.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/module/_error.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Components/PageNotFound.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Components/Hero.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Layouts/MenuItemDetail.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Components/ImageTile.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/components/hero-home.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Components/StaffBios.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/components/staff-details.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/components/versatile-two-unequal.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Components/Disclaimer.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Components/MenuItemTile.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Components/AdditionalInfo.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Components/Carousel.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/layout/_main.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/components/disclaimer.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/layout/_three-column.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/module/_rich-text.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Components/Versatile.cshtml",
+		"/Users/lheywood/Library/Application Support/Sublime Text 3/Packages/Emmet/Default (OSX).sublime-keymap",
+		"/Users/lheywood/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/lheywood/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/lheywood/Library/Application Support/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Components/EventTile.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/components/versatile-two-equal.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/components/versatile-three-equal.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/components/versatile-three-unequal.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/module/_local.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/layout/_footer.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/components/carousel.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/bower.json",
+		"/Users/lheywood/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/html/index.html",
+		"/Users/lheywood/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/Users/lheywood/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/js/modules/locations-map.js",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/js/modules/location-picker.js",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/module/_map.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/js/modules/locations.js",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/bower_components/slick-carousel/slick/slick.css",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/layouts/menu-tiles.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/layout/_two-column.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/module/_hero.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/base/_functions.scss",
+		"/Users/lheywood/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/module/_menu-divider.scss",
+		"/Users/lheywood/Library/Application Support/Sublime Text 3/Packages/User/SassBeautify.sublime-settings",
+		"/Users/lheywood/Library/Application Support/Sublime Text 3/Packages/SassBeautify/SassBeautify.sublime-settings",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/components/versatile-four-equal.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Components/MenuDivider.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/html/components/menu-divider.html",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/module/_introduction_menu.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Layouts/LocationLanding.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss/base/_mixins.scss",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views/Components/MenuIntroduction.cshtml",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/html/layouts/dinner.html",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/assets/images/event-tile-default.jpg",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/views/layouts/drinks.jade",
+		"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/html/layouts/local.html"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/,*.cshtml,*.jade,*.scss,*.js",
+			"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/,*.cshtml,*.jade,*.scss",
+			"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/,*.cshtml,*.jade,*.js,*.scss",
+			"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/,*.cshtml",
+			"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/,*.scss",
+			"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/,*.cshtml",
+			"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/,*.jade",
+			"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/,*.cshtml",
+			"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/,*.chstml",
+			"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/,*.scss",
+			"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/,*.jade",
+			"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/,*.jade,*.cshtml",
+			"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/,*.jade,*.html,*.cshtml",
+			"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/,*.html",
+			"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/",
+			"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src",
+			"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/Views",
+			"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src,",
+			"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src",
+			"/Users/lheywood/Projects/RuthsChris/RuthsChris.UI/src/scss",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"h4",
+			"Country\":\"[^U]",
+			"san juan",
+			"Country\":\"[^U]",
+			"Country\":\"!(U)",
+			"Country\":\"U",
+			"textSoFar",
+			"e.",
+			"name=\"(.*?)\"\\)",
+			"name=\"(.*?)\"\\s",
+			"name=\"(.?)\"",
+			"/name=(*?)/",
+			"errorElement",
+			"validatedElement",
+			"\n                .column-right",
+			"\n                .column-left",
+			" required",
+			"validate",
+			".form-row",
+			"edding Reception",
+			" !important",
+			"columns-2",
+			"col",
+			"left-col",
+			"occasion",
+			"firstname",
+			"ul.options ",
+			".trigger",
+			".fancy-select ",
+			"div",
+			"(<h4|h4 |h4\\()",
+			"(<h4|h4 |h4()",
+			"<h4",
+			"h4",
+			"scroll-target",
+			"scroll-anchor",
+			"scroll-target",
+			"drinks",
+			"scroll-target",
+			"scroll-",
+			"events",
+			" Menu",
+			"menu-",
+			"padding",
+			" | ",
+			"menu-divider",
+			"h6",
+			".with-arrow",
+			"a\\(href=\"#\"\\)\\.with\\-arrow\\s*?\\|",
+			"\\s*?.i.icon-arrow",
+			"a\\(href=\"#\"\\)\\.with\\-arrow\\s*?\\|",
+			"a\\(href=\\\"\\#\\\").with-arrow ",
+			"a(href=\"#\").with-arrow ",
+			"a(href='#').with-arrow ",
+			"\\s*?i.icon-arrow",
+			"a(href='#').with-arrow ",
+			"a(href=\"#\").with-arrow",
+			"a(href=\"#\").with-arrow.",
+			"\\s*?i.icon-arrow",
+			"\n                            i.icon-arrow",
+			"a.with-arrow ",
+			".with-arrow",
+			"\n                i.icon-arrow",
+			"a(href='#').with-arrow ",
+			".with-arrow",
+			".menu-divider",
+			"arg",
+			"param",
+			"<h4>",
+			"<h3>",
+			"nth-child",
+			"price",
+			".eyebrow {",
+			"include ../components/introduction",
+			"/introduction",
+			"introduction",
+			"Disable Smooth Scrolling on IE11",
+			"<h4",
+			"h4",
+			"h3",
+			"Person",
+			"menu-item-detail",
+			"Dinner Menu",
+			"block",
+			"images",
+			"fpo_hero_cta01_desktop",
+			"\n            source(srcset=\"/assets/images/fpo/fp",
+			"menuNavigation",
+			".index",
+			"tab",
+			"px;",
+			"px ",
+			"h4",
+			"h1",
+			"h2",
+			"#location",
+			"(-",
+			"//",
+			"base_font",
+			"jade"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"h5",
+			"id=\"$1\" name=\"$1\")",
+			"id=\"$1\" name=\"$1\" ",
+			"id=\"$1\" name=\"$1\"",
+			"+arrowLink(' |",
+			"')",
+			"+arrowLink(' |",
+			"+arrowLink('",
+			"')",
+			"+arrowLink('",
+			"')",
+			"+arrowLink('",
+			"')",
+			"+arrowLink('",
+			"a(href='#').with-arrow ",
+			"h3"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "gumball.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 458.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
