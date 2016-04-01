@@ -12,9 +12,9 @@ search_term = '#ignorethistweetitsatest'
 totp = pyotp.TOTP('base32secret3232')
 twitter = Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 
-def CheckFollow(follower):
-	follower = twitter.lookup_friendships(screen_name=follower)
-	if 'followed_by' in follower[0]['connections']:
+def CheckFollow(screenname):
+	friendships = twitter.lookup_friendships(screen_name=screenname)
+	if 'followed_by' in friendships[0]['connections']:
 		result = True
 	else:
 		result = False
