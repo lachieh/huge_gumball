@@ -1,11 +1,6 @@
 from twython import Twython, TwythonStreamer
+from twitter_auth import *
 import pyotp
-
-APP_KEY = 'OXTF145y8NGgzdWsTgQgc2eO4'
-APP_SECRET = 'ngjWEGkuHJVv314dUHb1dy8uEvvMxdMOF3XGVAR8K2xG619U4D'
-
-OAUTH_TOKEN = '14652468-74nWSyPTov403RuTPVPEvbyCa5gwUPqn3ColI2q8u'
-OAUTH_TOKEN_SECRET = 'dJf9uwD5f7P8PSVauaZHDmogwdk89uqvjKuKDFO5FEZSU'
 
 search_term = '#ignorethistweetitsatest'
 
