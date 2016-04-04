@@ -1,10 +1,13 @@
 from twython import Twython, TwythonStreamer
 from twitter_auth import *
+from RpiLcdBackpack import AdafruitLcd
+import threading
 import pyotp
 
-search_term = '#ignorethistweetitsatest'
+search_term = '#ignorethistweet'
 
-totp = pyotp.TOTP('base32secret3232')
+totp = pyotp.TOTP('hugeprizemachine')
+lcd = AdafruitLcd()
 twitter = Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 current_user = ""
 
@@ -16,9 +19,8 @@ def CheckFollow(screenname):
 		result = False
 	return result
 
-
 def CheckPassWithUser(user_screen_name):
-	message_text = "Thanks! What's the current OTP?"
+	message_text = "Thanks for sharing! Enter the current OTP on the screen to claim your prize!"
 	twitter.send_direct_message(screen_name=user_screen_name, text=message_text)
 	print "DM sent to user ", user_screen_name
 	stream = UserStreamer(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
@@ -26,9 +28,24 @@ def CheckPassWithUser(user_screen_name):
 	current_user = user_screen_name
 	stream.user()
 
+def ScreenOn():
+	lcd.backlight(True)
+	lcd.cursor(False)
+	lcd.blink(False)
+
+def ScreenOff():
+	lcd.clear()
+	lcd.backlight(False)
+
+def ClearAndPrint(message):
+	lcd.clear()
+	lcd.message(message)
+
 class UserStreamer(TwythonStreamer):
 	def on_success(self, data):
-		print 'Current OTP:', totp.now()
+		message = "Thanks for tweeting!\2  Please reply with\3    these numbers:\4      " + totp.now()
+		ScreenOn()
+		ClearAndPrint(message)
 		if 'direct_message' in data:
 			if data['direct_message']['sender']['screen_name'] == current_user:
 				validate = totp.verify(int(data['direct_message']['text']))
@@ -37,7 +54,7 @@ class UserStreamer(TwythonStreamer):
 					print 'Authentication Passed'
 					self.disconnect()
 				else:
-					print 'Failed Authentication. Waiting...'
+					print 'Authentication Failed. Try again...'
 
 	def on_error(self, status_code, data):
 		print status_code, data
@@ -45,7 +62,7 @@ class UserStreamer(TwythonStreamer):
 class SearchStreamer(TwythonStreamer):
     def on_success(self, data):
 		if 'user' in data:
-			print 'Triggered tweet: "', data['text'],'" by user', data['user']['screen_name']
+			print 'Triggered tweet: "' + data['text'] + '" by user' + data['user']['screen_name']
 			following = CheckFollow(data['user']['screen_name'])
 			if following == True:
 				print 'User', data['user']['screen_name'], 'is following you.'
@@ -56,7 +73,10 @@ class SearchStreamer(TwythonStreamer):
     def on_error(self, status_code, data):
         print status_code, data
 
-
 stream = SearchStreamer(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 
+print 'Listening for tweets containing the term:"' + search_term + '"'
 stream.statuses.filter(track=search_term)
+
+print "Exiting."
+lcd.backlight(False)
