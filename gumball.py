@@ -1,7 +1,6 @@
 from twython import Twython, TwythonStreamer
 from twitter_auth import *
 from RpiLcdBackpack import AdafruitLcd
-import threading
 import pyotp
 
 search_term = '#ignorethistweet'
@@ -54,16 +53,18 @@ class UserStreamer(TwythonStreamer):
 					print validate
 					if validate == True:
 						message = "Correct Code!\2Dispensing Now..."
-						ClearAndPrint
+						ClearAndPrint(message)
 						print 'Authentication Passed'
 						self.disconnect()
+						time.sleep(10)
+						ScreenOff()
 					else:
 						max_errors -= 1
 						print 'Authentication Failed. Try again...'
 				else:
 					print "Authentication Failed 3 times. Exiting."
-					ScreenOff()
 					self.disconnect()
+					ScreenOff()
 
 	def on_error(self, status_code, data):
 		print status_code, data
@@ -86,6 +87,3 @@ stream = SearchStreamer(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 
 print 'Listening for tweets containing the term:"' + search_term + '"'
 stream.statuses.filter(track=search_term)
-
-print "Exiting."
-lcd.backlight(False)
