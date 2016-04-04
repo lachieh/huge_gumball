@@ -9,6 +9,7 @@ totp = pyotp.TOTP('hugeprizemachine')
 lcd = AdafruitLcd()
 twitter = Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 current_user = ""
+max_errors = 3
 
 def CheckFollow(screenname):
 	friendships = twitter.lookup_friendships(screen_name=screenname)
@@ -47,10 +48,9 @@ class UserStreamer(TwythonStreamer):
 		ClearAndPrint(message)
 		if 'direct_message' in data:
 			if data['direct_message']['sender']['screen_name'] == current_user:
-				max_errors = 3
+				global max_errors
 				if max_errors:
 					validate = totp.verify(int(data['direct_message']['text']))
-					print validate
 					if validate == True:
 						message = "Correct Code!\2Dispensing Now..."
 						ClearAndPrint(message)
