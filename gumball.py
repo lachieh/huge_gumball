@@ -43,18 +43,27 @@ def ClearAndPrint(message):
 
 class UserStreamer(TwythonStreamer):
 	def on_success(self, data):
-		message = "Thanks for tweeting!\2  Please reply with\3    these numbers:\4      " + totp.now()
+		message = "Thanks for tweeting!\2Please reply with\3these numbers:\4       " + totp.now()
 		ScreenOn()
 		ClearAndPrint(message)
 		if 'direct_message' in data:
 			if data['direct_message']['sender']['screen_name'] == current_user:
-				validate = totp.verify(int(data['direct_message']['text']))
-				print validate
-				if validate == True:
-					print 'Authentication Passed'
-					self.disconnect()
+				max_errors = 3
+				if max_errors:
+					validate = totp.verify(int(data['direct_message']['text']))
+					print validate
+					if validate == True:
+						message = "Correct Code!\2Dispensing Now..."
+						ClearAndPrint
+						print 'Authentication Passed'
+						self.disconnect()
+					else:
+						max_errors -= 1
+						print 'Authentication Failed. Try again...'
 				else:
-					print 'Authentication Failed. Try again...'
+					print "Authentication Failed 3 times. Exiting."
+					ScreenOff()
+					self.disconnect()
 
 	def on_error(self, status_code, data):
 		print status_code, data
