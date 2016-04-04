@@ -2,6 +2,7 @@ from twython import Twython, TwythonStreamer
 from twitter_auth import *
 from RpiLcdBackpack import AdafruitLcd
 import pyotp
+import time
 
 search_term = '#ignorethistweet'
 
@@ -43,8 +44,11 @@ def ClearAndPrint(message):
 
 class UserStreamer(TwythonStreamer):
 	def on_success(self, data):
-		message = "Thanks for tweeting!\2Please reply with\3these numbers:\4       " + totp.now()
 		ScreenOn()
+		message = "Thanks for tweeting!\2Get ready to enter\3the next numbers\4in 10 seconds"
+		ClearAndPrint(message)
+		time.sleep(11)
+		message = "Please reply with\2these numbers:\4" + totp.now()
 		ClearAndPrint(message)
 		if 'direct_message' in data:
 			if data['direct_message']['sender']['screen_name'] == current_user:
