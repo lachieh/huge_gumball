@@ -58,6 +58,7 @@ class UserStreamer(TwythonStreamer):
 						message = "Correct Code!\2Dispensing Now..."
 						ClearAndPrint(message)
 						print 'Authentication Passed'
+						## Motor Trigger Code goes here
 						self.disconnect()
 						time.sleep(10)
 						ScreenOff()
